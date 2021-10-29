@@ -31,12 +31,12 @@ driver = new AndroidDriver (new URL("http://127.0.0.1:4723/wd/hub"), capabilitie
      @Test
      public void firstTest ()
      {
-
+         System.out.println("First test run");
         // WebElement element = driver.findElementByXPath("//*[contains (@text,'Search Wikipedia')]");
         // element.click();
-         WebElement element_to_init_search = driver.findElementByXPath("//*[contains(@text, 'Search Wikipedia')]");
-         element_to_init_search.click();
-         WebElement element_to_enter_search_line = driver.findElementByXPath("//*[contains(@text, 'Search Wikipedia')]");
-         element_to_enter_search_line.sendKeys();
+        // WebElement element_to_init_search = driver.findElementByXPath("//*[contains(@text, 'Search Wikipedia')]");
+        // element_to_init_search.click();
+        // WebElement element_to_enter_search_line = driver.findElementByXPath("//*[contains(@text, 'Search Wikipedia')]");
+        // element_to_enter_search_line.sendKeys();
      }
 }
