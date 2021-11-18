@@ -60,6 +60,12 @@ public class FirstTest5 {
             5
 
     );
+        waitForElementNotPresent (
+                "//*[@resource-id='org.wikipedia:id/search_close_btn']",
+                "Cannot find search input2",
+                5
+
+        );
 }
 
 
@@ -93,5 +99,10 @@ public class FirstTest5 {
         WebElement element = this.waitForElementByXpathAndClear(locator,error_message,timeoutInSeconds);
         element.sendKeys(value);
         return element;
+    }
+    private boolean waitForElementNotPresent (String id, String error_message,long timeoutInSeconds){
+        WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
+        By by = By.id(id);
+        return wait.withMessage(error_message + "\n").until(ExpectedConditions.invisibilityOfElementLocated(by));
     }
 }
